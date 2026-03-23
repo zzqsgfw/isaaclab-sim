@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Load pre-built USD from `wuji_hand_description/usd/` submodule instead of URDF conversion at runtime
+- Remove `wuji_hand.py` — articulation config inlined in `run_sim.py`, PD gains and collision filters read from USD
+- Add `--side` CLI argument for left/right hand selection (replaces hardcoded `HAND_SIDE`)
+- Update `wuji_hand_description` submodule to v0.2.3 (includes USD assets with PBR materials and collision filter pairs)
+
 ## [0.1.0] - 2026-02-02
 
 ### Added

@@ -5,7 +5,7 @@
 
 Simulation demo (IsaacSim): minimal demo for loading and controlling the Wuji Hand in IsaacSim simulator. The script loads the default right hand model and plays the trajectory in a loop. Supports both left and right hand configurations.
 
-https://github.com/user-attachments/assets/3fffb009-f78a-4dda-93ed-94de20b93811
+https://github.com/user-attachments/assets/2f58ad84-7ed6-46fe-94c1-b4148068bec3
 
 ## Table of Contents
 
@@ -21,9 +21,8 @@ https://github.com/user-attachments/assets/3fffb009-f78a-4dda-93ed-94de20b93811
 ├── assets/
 ├── data/
 │   └── wave.npy
-├── wuji_hand_description/
+├── wuji_hand_description/   (submodule: URDF, MJCF, USD, meshes)
 ├── run_sim.py
-├── wuji_hand.py
 └── README.md
 ```
 
@@ -33,9 +32,8 @@ https://github.com/user-attachments/assets/3fffb009-f78a-4dda-93ed-94de20b93811
 |------------------|-------------|
 | `assets/` | Asset files for simulation |
 | `data/` | Trajectory data files including `wave.npy` |
-| `wuji_hand_description/` | Git submodule containing Wuji Hand model descriptions (URDF, MJCF, meshes) |
-| `run_sim.py` | Main simulation script |
-| `wuji_hand.py` | Wuji Hand model implementation |
+| `wuji_hand_description/` | Git submodule containing Wuji Hand model descriptions (URDF, MJCF, USD, meshes). USD assets include fused meshes with PBR materials, physics, and collision filter pairs. |
+| `run_sim.py` | Main simulation script. Loads pre-built USD from submodule, no URDF conversion needed. |
 
 ## Usage
 
@@ -50,12 +48,14 @@ Follow the [official documentation](https://isaac-sim.github.io/IsaacLab/main/so
 ### Running
 
 ```bash
+# Right hand (default)
 python run_sim.py
+
+# Left hand
+python run_sim.py --side left
 ```
 
-The script loads the default right hand model and plays the trajectory from `data/wave.npy` in a loop.
-
-To use the left hand, edit `HAND_SIDE = "left"` in `run_sim.py`.
+The script loads the pre-built USD model from the submodule and plays the trajectory from `data/wave.npy` in a loop.
 
 ## Contact
 
