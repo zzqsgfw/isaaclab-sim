@@ -99,8 +99,8 @@ def main():
 
         clamped = saturate(
             joint_pos_target,
-            hand.data.soft_joint_pos_limits[..., 0],
-            hand.data.soft_joint_pos_limits[..., 1],
+            hand.data.soft_joint_pos_limits[0, :, 0],
+            hand.data.soft_joint_pos_limits[0, :, 1],
         )
         hand.set_joint_position_target(clamped)
         hand.write_data_to_sim()
