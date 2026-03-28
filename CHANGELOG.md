@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Simulation script for loading and controlling Wuji Hand in IsaacSim
 - Trajectory playback with loop support
-- Support for both left and right hand configurations
+- Support for both left- and right-hand configurations
 - Wuji Hand model as git submodule
 
 [Unreleased]: https://github.com/wuji-technology/isaaclab-sim/compare/v0.1.0...HEAD

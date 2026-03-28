@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/wuji-technology/isaaclab-sim)](https://github.com/wuji-technology/isaaclab-sim/releases)
 
-Simulation demo (IsaacSim): minimal demo for loading and controlling the Wuji Hand in IsaacSim simulator. Loads pre-built USD assets with PBR materials and plays trajectory in a loop. Supports both left and right hand configurations via `--side` argument.
+Simulation demo (IsaacSim): minimal demo for loading and controlling the Wuji Hand in IsaacSim simulator. Loads pre-built USD assets with PBR materials and plays trajectory in a loop. Supports both left- and right-hand configurations via `--side` argument.
 
 https://github.com/user-attachments/assets/2f58ad84-7ed6-46fe-94c1-b4148068bec3
 
